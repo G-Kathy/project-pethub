@@ -1,0 +1,73 @@
+body {
+    font-family: 'Baskerville Old Face', serif;
+    background: url('backgroud.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-form h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.login-form p {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-form a {
+    color: #666;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}

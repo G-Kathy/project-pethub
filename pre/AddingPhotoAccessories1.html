@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Photo Accessories</title>
+    <link rel="stylesheet" href="AddingPhotoAccessories1.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="location.href='Seller1.html'" class="back-button">Back</button>
+        <h1>Adding Photo Accessories</h1>
+        <form action="AddingPhotoAccessories1.php" method="post" enctype="multipart/form-data">
+            <label for="photo">Add photo of Accessories:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <img id="preview" src="#" alt="Photo preview" style="display: none; max-width: 320px; max-height: 260px;"/>
+
+            <label for="description">Add description:</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+
+            <label for="bkash">Add Bkash number:</label>
+            <div class="input-with-icon">
+                <img src="bkash-small.jpg" alt="Bkash" class="small-icon">
+                <input type="text" id="bikash" name="bikash" required>
+            </div>
+
+            <label for="nagad">Add Nagad number:</label>
+            <div class="input-with-icon">
+                <img src="nagad-small.png" alt="Nagad" class="small-icon">
+                <input type="text" id="nagad" name="nagad" required>
+            </div>
+
+            <button type="submit">Save</button>
+        </form>
+
+        <h2>Uploaded Photos</h2>
+        <div id="photo-gallery">
+            <?php include 'display_photos.php'; ?>
+        </div>
+
+        <div class="additional-images">
+            <img src="petaccessories.png" alt="Pet Accessories" class="additional-image">
+            <img src="access.png" alt="Access" class="additional-image">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('photo').onchange = function(event) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById('preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>

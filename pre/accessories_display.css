@@ -1,0 +1,86 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Baskerville Old Face', serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center all header content */
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    position: relative; /* Ensure the back button is positioned correctly */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Position the back button to the left */
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+main table, th, td {
+    border: 1px solid #000;
+}
+
+main th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+}

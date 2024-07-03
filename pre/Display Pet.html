@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Pet</title>
+    <link rel="stylesheet" href="Display Pet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Small_logo_new.png" alt="Logo">
+        </header>
+        <nav>
+            <button onclick="location.href='Buyer.html'" class="back-button">Back</button>
+        </nav>
+        <main>
+            <table id="tblPet">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Description</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated by PHP -->
+                </tbody>
+            </table>
+            <button id="btnView">View</button>
+            <button onclick="location.href='thankyou.php'" id="btnAdopt">Adopt</button>
+        </main>
+        <footer>
+            <img src="petpic2.png" alt="Pet Picture">
+        </footer>
+    </div>
+    <script>
+        document.getElementById('btnView').addEventListener('click', function() {
+            window.location.href = 'display_pet.php?action=view';
+        });
+    </script>
+</body>
+</html>

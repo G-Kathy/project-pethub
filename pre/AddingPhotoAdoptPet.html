@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Photo Adopt Pet</title>
+    <link rel="stylesheet" href="AddingPhotoAdoptPet.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="location.href='Seller1.html'" class="back-button">Back</button>
+        <h1>Add your Address</h1>
+        <form action="AddingPhotoAdoptPet.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="description">Add description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Add your Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Add photo of Pet</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <img id="preview" src="#" alt="Photo preview" style="display: none;"/>
+            </div>
+
+            <button type="submit">Save</button>
+        </form>
+
+        <img src="images/Small_logo_new.png" alt="Logo" class="logo">
+    </div>
+
+    <script>
+        document.getElementById('backButton').onclick = function() {
+            window.history.back();
+        };
+
+        document.getElementById('photo').onchange = function(event) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById('preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Baskerville Old Face', serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+header .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button {
+    font-size: 18px;
+    padding: 15px 40px;
+    margin: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+footer img {
+    width: 80%;
+    height: auto;
+}

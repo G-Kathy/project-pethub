@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.back-button {
+    display: block;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.photo-container,
+.description-container,
+.account-details {
+    margin: 20px 0;
+}
+
+#photo {
+    display: block;
+}
+
+#photo-preview {
+    width: 310px;
+    height: 230px;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.upload-button,
+.save-button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.upload-button {
+    background-color: #0275d8;
+}
+
+.save-button {
+    background-color: #5cb85c;
+}
+
+.upload-button:hover,
+.save-button:hover {
+    opacity: 0.8;
+}

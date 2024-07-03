@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Photo of Food & Medicine</title>
+    <link rel="stylesheet" href="AddingPhoto_FoodMedicine.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="location.href='Seller1.html'" class="back-button">Back</button>
+        <h1>Add Photo of Food & Medicine</h1>
+        <form action="AddingPhoto_FoodMedicine.html" method="post" enctype="multipart/form-data">
+            <div class="photo-container">
+                <label for="photo">Choose Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" onchange="previewImage(event)">
+                <img id="photo-preview" src="#" alt="Photo Preview" style="display:none;">
+            </div>
+            <div class="description-container">
+                <label for="description">Add Description:</label>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            </div>
+            <div class="account-details">
+                <label for="bikash">Bikash Number:</label>
+                <input type="text" id="bikash" name="bikash">
+                <label for="nagad">Nagad Number:</label>
+                <input type="text" id="nagad" name="nagad">
+            </div>
+            <button type="submit" name="upload" class="upload-button">Upload</button>
+            <button type="submit" name="save" class="save-button">Save</button>
+        </form>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('photo-preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
